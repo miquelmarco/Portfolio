@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    color: #68b2f8;
+    color: #506ee5;
+    color: #7037cd;
+    color: #651f71;
+    color: #1d0c20;
+    color: black;
+    /* border: solid red 1px; */
+    font-family: 'Share Tech Mono', monospace;
+}
+
+header {
+    min-height: 70vh;
+    max-height: 70vh;
+    background-color: #651f71;;
+}
+
+main {
+    min-height: 30vh;
+    max-height: 30vh;
+    background-color:#1d0c20;
+}
+
+footer {
+    min-height: 50vh;
+}
+
+/* index edit */
+
+.myImg {
+    height: 30rem;
+    clip-path: circle(53%);
+    border-radius: 8rem;
+}
+
+.myInfo {
+    color: #68b2f8;
+}
+
+.btnhead {
+    color: #506ee5;
+    font-weight: 900;
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+}
