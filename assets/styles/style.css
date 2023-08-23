@@ -45,6 +45,26 @@ main {
     font-weight: bolder !important;
 }
 
+.subTitle {
+    display: block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 26ch;
+    color: White;
+
+    animation: typing 5s steps(26),
+    blink 0.5s infinite step-end alternate;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0}
+}
+
+@keyframes blink {
+    50% { border-color: transparent}
+}
+
 .presentationSpan {
     color: white;
 }
