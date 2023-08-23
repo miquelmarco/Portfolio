@@ -13,78 +13,190 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="shortcut icon" href="./assets/images/faviconLogo.png" type="image/x-icon">
-    <title>Document</title>
+    <title>MARCO MIQUEL || PORTFOLIO</title>
 </head>
 
 <body>
-    <header class="d-flex flex-column justify-content-between align-items-center">
-        <nav class="nav w-75 d-flex justify-content-end gap-3 m-3 animate__animated animate__slideInDown">
-            <button class="btnhead">About Me</button>
-            <button class="btnhead">Languages and Techs</button>
-            <button class="btnhead">Projects</button>
-            <button class="btnhead">Certifications</button>
-        </nav>
-        <div class="d-flex w-75 justify-content-around m-3">
-            <div class="myImgContainer animate__animated animate__slideInLeft">
-                <!-- <img class="myImg" src="./assets/images/myProfileImg.jpg" alt="myImage" title="my image"> -->
+    <div id="app">
+        <header class="d-flex flex-column justify-content-between align-items-center">
+            <nav class="nav w-75 d-flex justify-content-between gap-3 m-3 animate__animated animate__fadeInDownBig p-2">
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="logoFoot mx-2" src="./assets/images/faviconLogo.png" alt="miquel logo"
+                        title="Miquel Logo">
+                    <p class="m-0 mx-3 text-white">Keep it Simple!</p>
+                </div>
+                <div class="navIntroContainer w-75 d-flex justify-content-end gap-3 mx-3">
+                    <button @click="currentSection = 1" class="btnhead"
+                        :class="{'btnhead': true, 'spanBg': currentSection === 1}">About Me</button>
+                    <button @click="currentSection = 2" class="btnhead"
+                        :class="{'btnhead': true, 'spanBg': currentSection === 2}">Languages and Techs</button>
+                    <button @click="currentSection = 3" class="btnhead"
+                        :class="{'btnhead': true, 'spanBg': currentSection === 3}">Projects</button>
+                    <button @click="currentSection = 4" class="btnhead"
+                        :class="{'btnhead': true, 'spanBg': currentSection === 4}">Certifications</button>
+                </div>
+            </nav>
+            <div class="mainTextContainer d-flex w-75 justify-content-around m-3">
+                <div class="myImgContainer animate__animated animate__zoomInRight">
+                    <!-- <img class="myImg" src="./assets/images/myProfileImg.jpg" alt="myImage" title="my image"> -->
+                </div>
+                <div class="myInfo w-50 d-flex flex-column justify-content-center">
+                    <h1 class="animate__animated animate__zoomInRight">MARCO MIQUEL</h1>
+                    <h2 class="animate__animated animate__zoomInRight">Full-Stack JAVA Developer</h2>
+                    <h6 class="mainText w-75 animate__animated animate__zoomInRight">My name is Marco and I'm a Web Developer
+                        🧑‍💻
+                        Currently, I work with technologies like <span class="presentationSpan">HTML5, CSS3, Javascript,
+                            Vue.Js, Bootstrap, JAVA, Spring,
+                            Spring Boot, PostgreSQL </span>and constantly learning new ones!
+                        I used to work at a well-known bank with an incredible team, focusing on customer service. One
+                        day,
+                        I discovered the wonderful world of programming, and since then, a passion has awakened that
+                        fills me every day.
+                        My previous experience working in teams has been a valuable resource that I have brought to the
+                        field of web development, allowing me to create fully functional high-quality applications.
+                        If you'd like know me or to see some of my work, <span class="presentationSpan">contact
+                            me!</span>
+                    </h6>
+                </div>
             </div>
-            <div class="myInfo w-50 d-flex flex-column justify-content-center">
-                <h1 class="animate__animated animate__slideInRight">MARCO MIQUEL</h1>
-                <h2 class="animate__animated animate__slideInRight">Full-Stack JAVA Developer</h2>
-                <h6 class="w-75 animate__animated animate__slideInRight">My name is Marco and I'm a Web Developer 🧑‍💻
-                    Currently, I work with technologies like <span class="presentationSpan">HTML5, CSS3, Javascript,
-                        Vue.Js, Bootstrap, JAVA, Spring,
-                        Spring Boot, PostgreSQL </span>and constantly learning new ones!
-                    I used to work at a well-known bank with an incredible team, focusing on customer service. One day,
-                    I discovered the wonderful world of programming, and since then, a passion has awakened that
-                    fills me every day.
-                    My previous experience working in teams has been a valuable resource that I have brought to the
-                    field of web development, allowing me to create fully functional high-quality applications.
-                    If you'd like know me or to see some of my work, <span class="presentationSpan">contact me!</span>
-                </h6>
-            </div>
-        </div>
-    </header>
-    <main class="d-flex align-items-center">
-        <!-- <section class="w-100 d-flex justify-content-evenly animate__animated animate__slideInUp">
-            <a class="text-decoration-none" target="_blank" href="https://www.linkedin.com/in/marco-miquel/">
-                <img class="logoFoot" src="./assets/images/linkedinBlue.png" alt="LinkedIn" title="LinkedIn">
-                <button class="btnFoot">LinkedIn!</button>
-            </a>
-            <a class="text-decoration-none" target="_blank" href="https://github.com/miquelmarco">
-                <img class="logoFoot" src="./assets/images/githubLogo.png" alt="GitHub" title="GitHub">
-                <button class="btnFoot">GitHub!</button>
-            </a>
-            <a class="text-decoration-none" href="mailto:miquel.marco@outlook.com">
-                <img class="logoFoot" src="./assets/images/mailBlue.png" alt="">
-                <button class="btnFoot">miquel.marco@outlook.com</button>
-            </a>
-            <a class="text-decoration-none" href="./assets/docs/Marco Miquel ENG.pdf" download>
-                <img class="logoFoot" src="./assets/images/cv1Blue.png" alt="cv">
-                <button class="btnFoot">Download My CV!</button>
-            </a>
-        </section> -->
+        </header>
+        <main class="d-flex align-items-center">
+            <section v-if="currentSection == 1"
+                class="linksContainer w-100 d-flex justify-content-evenly animate__animated animate__zoomInUp">
+                <a class="text-decoration-none" target="_blank" href="https://www.linkedin.com/in/marco-miquel/">
+                    <img class="logoFoot mx-2" src="./assets/images/linkedinBlue.png" alt="LinkedIn" title="LinkedIn">
+                    <button class="btnFoot">LinkedIn!</button>
+                </a>
+                <a class="text-decoration-none" target="_blank" href="https://github.com/miquelmarco">
+                    <img class="logoFoot mx-2" src="./assets/images/githubLogo.png" alt="GitHub" title="GitHub">
+                    <button class="btnFoot">GitHub!</button>
+                </a>
+                <a class="text-decoration-none" href="mailto:miquel.marco@outlook.com">
+                    <img class="logoFoot mx-2" src="./assets/images/mailBlue.png" alt="">
+                    <button class="btnFoot">miquel.marco@outlook.com</button>
+                </a>
+                <a class="text-decoration-none" href="./assets/docs/Marco Miquel ENG.pdf" download>
+                    <img class="logoFoot mx-2" src="./assets/images/cv1Blue.png" alt="cv">
+                    <button class="btnFoot">Download My CV!</button>
+                </a>
+            </section>
 
-        <section class="w-100">
-            <div class="d-flex justify-content-evenly m-5">
-                <img class="techImg" src="./assets/images/HTML.png" alt="HTML" title="HTML">
-                <img class="techImg" src="./assets/images/CSS.png" alt="CSS" title="CSS">
-                <img class="techImg" src="./assets/images/Javascript.png" alt="Javascript" title="Javascript">
-                <img class="techImg" src="./assets/images/Vue.png" alt="Vue.Js" title="Vue.Js">
-                <img class="techImg" src="./assets/images/Bootstrap.png" alt="Bootstrap" title="Bootstrap">
-                <img class="techImg" src="./assets/images/JAVA.png" alt="JAVA" title="JAVA">
-                <img class="techImg" src="./assets/images/Spring.png" alt="Spring" title="Spring Framework">
-                <img class="techImg" src="./assets/images/Hibernate.png" alt="Hibernate" title="Hibernate ORM">
-                <img class="techImg" src="./assets/images/PostgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
-                <img class="techImg" src="./assets/images/Postman.png" alt="Postman" title="Postman">
-            </div>
-        </section>
-    </main>
+            <section v-if="currentSection == 2" class="w-100  animate__animated animate__zoomInUp">
+                <div class="techContainer d-flex justify-content-evenly m-5">
+                    <img class="techImg" src="./assets/images/HTML.png" alt="HTML" title="HTML">
+                    <img class="techImg" src="./assets/images/CSS.png" alt="CSS" title="CSS">
+                    <img class="techImg" src="./assets/images/Javascript.png" alt="Javascript" title="Javascript">
+                    <img class="techImg" src="./assets/images/Vue.png" alt="Vue.Js" title="Vue.Js">
+                    <img class="techImg" src="./assets/images/Bootstrap.png" alt="Bootstrap" title="Bootstrap">
+                    <img class="techImg" src="./assets/images/JAVA.png" alt="JAVA" title="JAVA">
+                    <img class="techImg" src="./assets/images/Spring.png" alt="Spring" title="Spring Framework">
+                    <img class="techImg" src="./assets/images/Hibernate.png" alt="Hibernate" title="Hibernate ORM">
+                    <img class="techImg" src="./assets/images/PostgreSQL.png" alt="PostgreSQL" title="PostgreSQL">
+                    <img class="techImg" src="./assets/images/Postman.png" alt="Postman" title="Postman">
+                </div>
+            </section>
+
+            <section v-if="currentSection == 3"
+                class="page-content d-flex w-100 justify-content-evenly align-items-center  animate__animated animate__zoomInUp">
+                <div class="card bookBg">
+                    <h2 class="title">BookSphere</h2>
+                    <div class="content">
+                        <p class="copy fw-bold">Library page - E-Commerce</p>
+                        <div class="d-flex">
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://github.com/miquelmarco/Book-Sphere"><i
+                                    class="bi bi-github mx-2 text-primary fw-bold iconCard">Code!</i></a>
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://booksphere-28wi.onrender.com/index.html"><i
+                                    class="bi bi-box-arrow-up-right mx-2 text-primary fw-bold iconCard">Deploy!</i></a>
+                        </div>
+                        <div class="my-3">
+                            <p class="text-white fw-bold">HTML5, CSS3, Javascript, Vue.Js, Bootstrap, JAVA, Spring,
+                                PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card amazingBg">
+                    <h2 class="title">Amazing Events</h2>
+                    <div class="content">
+                        <p class="copy fw-bold">Events Producer page</p>
+                        <div class="d-flex">
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://github.com/miquelmarco/Amazing-Events"><i
+                                    class="bi bi-github mx-2 text-primary fw-bold iconCard">Code!</i></a>
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://miquelmarco.github.io/Amazing-Events/"><i
+                                    class="bi bi-box-arrow-up-right mx-2 text-primary fw-bold iconCard">Deploy!</i></a>
+                        </div>
+                        <div class="my-3">
+                            <p class="text-white fw-bold">HTML5, CSS3, Javascript, Vue.Js, Bootstrap</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card homebankingBg">
+                    <h2 class="title">Bank of Wonder</h2>
+                    <div class="content">
+                        <p class="copy fw-bold">Homebanking page</p>
+                        <div class="d-flex">
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://github.com/miquelmarco/Home-Banking"><i
+                                    class="bi bi-github mx-2 text-primary fw-bold iconCard">Code!</i></a>
+                        </div>
+                        <div class="my-3">
+                            <p class="text-white fw-bold">HTML5, CSS3, Javascript, Vue.Js, Bootstrap, JAVA, Spring,
+                                PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card p4pBg">
+                    <h2 class="title">Bank of Wonder</h2>
+                    <div class="content">
+                        <p class="copy fw-bold">Homebanking page</p>
+                        <div class="d-flex">
+                            <a target="_blank" class="text-decoration-none"
+                                href="https://miquelmarco.github.io/Puente-4-Podcast/#"><i
+                                    class="bi bi-box-arrow-up-right mx-2 text-primary fw-bold iconCard">Deploy! (Only
+                                    MockUp)</i></a>
+                        </div>
+                        <div class="my-3">
+                            <p class="text-white fw-bold">HTML5, CSS3, Javascript, Vue.Js, Bootstrap, JAVA, Spring,
+                                PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section v-if="currentSection == 4"
+                class="certificationSection w-100 d-flex justify-content-around align-items-center gap-3  animate__animated animate__zoomInUp">
+                <div class="certiContainer m-2 text-center p-3">
+                    <p class="certiTitle fs-3">Full-Stack JAVA Developer</p>
+                    <p class="certiSubTitle">2023 Certification MindHub LA</p>
+                    <a class="text-decoration-none" href="./assets/docs/MindHub Certificate.pdf" download>
+                        <img class="logoFoot" src="./assets/images/MindHubBadge.png" alt="Certificate"
+                            title="Certificate">
+                        <button class="btnFoot">Download Copy!</button>
+                    </a>
+                </div>
+                <div class="certiContainer m-2 text-center p-3">
+                    <p class="certiTitle fs-3">Javascript I</p>
+                    <p class="certiSubTitle">2022 Chilean Government Certification</p>
+                    <a class="text-decoration-none" href="./assets/docs/JS1 Certificate.pdf" download>
+                        <img class="logoFoot" src="./assets/images/gobLogo.png" alt="Certificate" title="Certificate">
+                        <button class="btnFoot">Download Copy!</button>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <link rel="stylesheet" href="./assets/scripts/index.js">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/scripts/index.js"></script>
 </body>
 
 </html>

@@ -20,12 +20,26 @@ header {
 main {
     min-height: 30vh;
     max-height: 30vh;
-    background-color: #1d0c20;
     background: rgb(16, 1, 18);
     background: linear-gradient(0deg, rgb(17, 1, 19) 0%, rgb(52, 7, 59) 80%);
 }
 
+/* footer {
+    min-height: 30vh;
+} */
+
 /* index edit */
+
+/* .nav {
+    background-color: #1d0c209d;
+    border-radius: 0.5rem;
+    position: fixed;
+    z-index: 1;
+} */
+
+/* .mainTextContainer {
+    margin-top: 7rem !important;
+} */
 
 .myImgContainer {
     height: 30rem;
@@ -35,9 +49,9 @@ main {
     border-radius: 1rem;
     border-style: outset;
     border-color: #1d0c20de;
-    border-width: 0.5rem;
+    border-width: 0.35rem;
     margin-bottom: 3rem !important;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow: rgba(54, 53, 53, 0.19) 0px 10px 20px, rgba(46, 45, 45, 0.23) 0px 6px 6px;
     transition: 1.5s;
 }
 
@@ -51,11 +65,22 @@ main {
 }
 
 .btnhead {
-    color: white;
+    color: #8b9ad6;
     font-weight: 900;
     border-radius: 0.5rem;
     padding: 0.7rem;
-    background-color: #1d0c20;
+    background-color: #1d0c203f;
+}
+
+.btnhead:hover {
+    background-color: #506ee5;
+    color: white;
+    transition: 0.3s;
+}
+
+.spanBg {
+    background-color: white !important;
+    color: #1d0c20 !important;
 }
 
 /* mainfoot edit */
@@ -75,4 +100,318 @@ main {
 
 .techImg {
     height: 5rem;
+}
+
+/* card project edit */
+
+:root {
+    --d: 700ms;
+    --e: cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card {
+    border-style: outset;
+    border-color: #1d0c20de;
+    border-width: 0.35rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem;
+    width: 25rem;
+    height: 15rem;
+    text-align: center;
+    color: whitesmoke;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.bookBg {
+    background-image: url(../images/booksphereMini.png);
+    background-size: cover;
+}
+
+.amazingBg {
+    background-image: url(../images/AEMini.png);
+    background-size: cover;
+}
+
+.homebankingBg {
+    background-image: url(../images/homebankingMini.png);
+    background-size: cover;
+}
+
+.p4pBg {
+    background-image: url(../images/p4pMini.png);
+    background-size: cover;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background-position: 0 0;
+    transition: transform calc(var(--d) * 1.5) var(--e);
+    pointer-events: none;
+}
+
+.card:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+    transform: translateY(-50%);
+    transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    transition: transform var(--d) var(--e);
+    z-index: 1;
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffffff;
+    background-color: #651f71;
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+}
+
+.copy {
+    font-size: 1.125rem;
+    font-style: italic;
+    line-height: 1.35;
+}
+
+.btn:hover {
+    background-color: #0d0d0d;
+}
+
+.btn:focus {
+    outline: 1px dashed yellow;
+    outline-offset: 3px;
+}
+
+.card:after {
+    transform: translateY(0);
+}
+
+.content {
+    transform: translateY(calc(100% - 4.5rem));
+}
+
+.content>*:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+}
+
+.card:hover,
+.card:focus-within {
+    align-items: center;
+}
+
+.card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+}
+
+.card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+}
+
+.card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+}
+
+.card:hover .content>*:not(.title),
+.card:focus-within .content>*:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+    color: white;
+}
+
+.card:focus-within:before,
+.card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content>*:not(.title) {
+    transition-duration: 0s;
+}
+
+.iconCard {
+    background-color: #651f71;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.iconCard:hover {
+    background-color: rgba(255, 255, 255, 0.507);
+    color: #651f71 !important;
+    transition: 0.3s;
+}
+
+/* certification edit */
+
+.certiContainer {
+    width: 30rem;
+    height: 12rem;
+    background-color: #506ee5;
+    border-radius: 0.5rem;
+    border-style: groove;
+    border-color: #1d0c20;
+    border-width: 0.2rem;
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px, rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, rgba(253, 253, 253, 0.2) 0px -3px 0px inset;
+}
+
+.certiTitle {
+    color: White;
+    font-weight: 500;
+}
+
+.certiSubTitle {
+    color: white;
+    font-weight: 400;
+}
+
+/* querys */
+
+@media only screen and (max-width: 1690px) {
+    main {
+        min-height: 30vh;
+        max-height: none;
+    }
+
+    .page-content {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin: 2rem;
+    }
+
+    .certificationSection {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .mainText {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navIntroContainer {
+        justify-content: center !important;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .myImgContainer {
+        height: 25rem;
+        width: 20rem;
+    }
+
+    .techContainer {
+        margin: 0rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .mainText {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .nav {
+        width: 90% !important;
+    }
+
+    .navIntroContainer {
+        width: 90% !important;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .linksContainer {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    header {
+        min-height: 70vh;
+        max-height: none;
+    }
+
+    .mainTextContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .myInfo {
+        width: 100% !important;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .navIntroContainer {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .card {
+        width: 20rem !important;
+        height: 30rem !important;
+        background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .myImgContainer {
+        height: 20rem;
+        width: 15rem;
+    }
+
+    .card {
+        width: 16rem !important;
+        height: 25rem !important;
+    }
+
+    .iconCard {
+        margin: 0rem !important;
+    }
+
+    .certiContainer {
+        height: fit-content;
+    }
 }
