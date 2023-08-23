@@ -14,7 +14,8 @@ header {
     min-height: 70vh;
     max-height: 70vh;
     background-color: #651f71;
-    ;
+    background-image: url(../images/fondoViolet.jpg);
+    background-size: cover;
 }
 
 main {
@@ -23,23 +24,6 @@ main {
     background: rgb(16, 1, 18);
     background: linear-gradient(0deg, rgb(17, 1, 19) 0%, rgb(52, 7, 59) 80%);
 }
-
-/* footer {
-    min-height: 30vh;
-} */
-
-/* index edit */
-
-/* .nav {
-    background-color: #1d0c209d;
-    border-radius: 0.5rem;
-    position: fixed;
-    z-index: 1;
-} */
-
-/* .mainTextContainer {
-    margin-top: 7rem !important;
-} */
 
 .myImgContainer {
     height: 30rem;
@@ -58,6 +42,7 @@ main {
 .myInfo {
     color: #68b2f8;
     transition: 4s;
+    font-weight: bolder !important;
 }
 
 .presentationSpan {
@@ -413,5 +398,29 @@ main {
 
     .certiContainer {
         height: fit-content;
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    header {
+        min-height: 75vh;
+    }
+
+    .myImgContainer {
+        height: 20rem;
+        width: 15rem;
+        margin: 1rem !important;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .linksContainer {
+        padding: 0.3rem !important;
     }
 }

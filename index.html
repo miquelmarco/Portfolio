@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="shortcut icon" href="./assets/images/faviconLogo.png" type="image/x-icon">
-    <title>MARCO MIQUEL || PORTFOLIO</title>
-</head>
+<div id="app">
 
-<body>
-    <div id="app">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="./assets/styles/style.css">
+        <link rel="shortcut icon" href="./assets/images/faviconLogo.png" type="image/x-icon">
+        <title v-if="currentSection === 1">ABOUT ME || MARCO MIQUEL</title>
+        <title v-if="currentSection === 2">TECHS || MARCO MIQUEL</title>
+        <title v-if="currentSection === 3">PROJECTS || MARCO MIQUEL</title>
+        <title v-if="currentSection === 4">CERTIFICATIONS || MARCO MIQUEL</title>
+    </head>
+
+    <body>
         <header class="d-flex flex-column justify-content-between align-items-center">
             <nav class="nav w-75 d-flex justify-content-between gap-3 m-3 animate__animated animate__fadeInDownBig p-2">
                 <div class="d-flex justify-content-center align-items-center">
@@ -43,7 +47,8 @@
                 <div class="myInfo w-50 d-flex flex-column justify-content-center">
                     <h1 class="animate__animated animate__zoomInRight">MARCO MIQUEL</h1>
                     <h2 class="animate__animated animate__zoomInRight">Full-Stack JAVA Developer</h2>
-                    <h6 class="mainText w-75 animate__animated animate__zoomInRight">My name is Marco and I'm a Web Developer
+                    <h6 class="mainText w-75 animate__animated animate__zoomInRight">My name is Marco and I'm a Web
+                        Developer
                         🧑‍💻
                         Currently, I work with technologies like <span class="presentationSpan">HTML5, CSS3, Javascript,
                             Vue.Js, Bootstrap, JAVA, Spring,
@@ -149,9 +154,9 @@
                     </div>
                 </div>
                 <div class="card p4pBg">
-                    <h2 class="title">Bank of Wonder</h2>
+                    <h2 class="title">Puente4Podcast</h2>
                     <div class="content">
-                        <p class="copy fw-bold">Homebanking page</p>
+                        <p class="copy fw-bold">Podcast page</p>
                         <div class="d-flex">
                             <a target="_blank" class="text-decoration-none"
                                 href="https://miquelmarco.github.io/Puente-4-Podcast/#"><i
@@ -191,12 +196,12 @@
         <footer>
 
         </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./assets/scripts/index.js"></script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="./assets/scripts/index.js"></script>
 </body>
 
 </html>
