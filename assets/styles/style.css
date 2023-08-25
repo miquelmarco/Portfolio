@@ -139,22 +139,30 @@ main {
 
 .bookBg {
     background-image: url(../images/booksphereMini.png);
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .amazingBg {
     background-image: url(../images/AEMini.png);
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .homebankingBg {
     background-image: url(../images/homebankingMini.png);
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .p4pBg {
     background-image: url(../images/p4pMini.png);
-    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .card:before {
