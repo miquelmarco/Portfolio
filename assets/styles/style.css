@@ -46,6 +46,9 @@ main {
 }
 
 .subTitle {
+    /* background-color: #506ee5;
+    padding: 0.5rem;
+    border-radius: 0.3rem; */
     display: block;
     white-space: nowrap;
     border-right: 4px solid;
@@ -53,16 +56,20 @@ main {
     color: White;
 
     animation: typing 5s steps(26),
-    blink 0.5s infinite step-end alternate;
+        blink 0.5s infinite step-end alternate;
     overflow: hidden;
 }
 
 @keyframes typing {
-    from { width: 0}
+    from {
+        width: 0
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent}
+    50% {
+        border-color: transparent
+    }
 }
 
 .presentationSpan {
@@ -70,7 +77,7 @@ main {
 }
 
 .btnhead {
-    color: #8b9ad6;
+    color: #ffffff;
     font-weight: 900;
     border-radius: 0.5rem;
     padding: 0.7rem;
